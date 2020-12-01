@@ -6,11 +6,11 @@
 /*FUENTES*/
 @font-face{
     font-family: "NotoSerif";
-    src:url(fuentes/NotoSerif-Regular.ttf);
+    src:url(../fuentes/NotoSerif-Regular.ttf);
 }
 @font-face{
     font-family: "OpenSans";
-    src:url(fuentes/OpenSans-Regular.ttf);
+    src:url(../fuentes/OpenSans-Regular.ttf);
 }
 
 :root {
@@ -20,4 +20,8 @@
     --azul: #6897DE;
     --beige: #FFC756;
     --gris-claro: #EDEDED;
+
+    /*FUENTES*/
+    --serif: "NotoSerif";
+    --sans-serif: "OpenSans";
 }

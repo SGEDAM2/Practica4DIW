@@ -9,6 +9,33 @@
     <link rel="stylesheet" href="estilos/clear.css">
     <link rel="stylesheet" href="estilos/header.css">
     <link rel="stylesheet" href="estilos/footer.css">
+    <link rel="stylesheet" href="estilos/fuentesColores.css">
+    <style>
+        section>img:first-of-type{
+            width: 50%;
+            height: 40%;
+        }
+        body{
+            background-color: var(--gris-claro);
+            font-family: var(--sans-serif), sans-serif;
+        }
+        section{
+            width: 50%;
+            /*Margenes y rellenos*/
+            margin: 1em 0;
+            padding: 1%;
+            /*Distribuir contenido*/
+            align-items: center;
+            flex-direction: column;
+            /*Borde*/
+            box-shadow: 5px 10px 18px var(--azul-oscuro);
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +46,7 @@
     <main>
         <!--Botones: &#10094 &#10095-->
         <section>
-            <img src="imagenes/img1.jpg" alt="">
+            <img src="imagenes/administrador1920.jpg" alt="Administrador">
             <h3>Administrador</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt fugit nam perferendis
                 molestiae voluptatum vitae illum enim deserunt non, facere, deleniti ab exercitationem, quia possimus
@@ -27,12 +54,20 @@
             <img src="imagenes/dot1.png" alt="">
         </section>
         <section>
-            <img src="imagenes/img2.jpg" alt="">
+            <img src="imagenes/profesor1920.jpg" alt="Profesor">
             <h3>Profesor</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt fugit nam perferendis
                 molestiae voluptatum vitae illum enim deserunt non, facere, deleniti ab exercitationem, quia possimus
                 libero asperiores fugiat eum!</p>
             <img src="imagenes/dot2.png" alt="">
+        </section>
+        <section>
+            <img src="imagenes/alumno1920.jpg" alt="Alumno">
+            <h3>Alumno</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt fugit nam perferendis
+                molestiae voluptatum vitae illum enim deserunt non, facere, deleniti ab exercitationem, quia possimus
+                libero asperiores fugiat eum!</p>
+            <img src="imagenes/dot3.png" alt="">
         </section>
         <script src="codigo/inicio.js"></script>
     </main>
