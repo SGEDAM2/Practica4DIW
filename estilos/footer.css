@@ -1,0 +1,6 @@
+@import url("fuentesColores.css");
+
+footer{
+    background-color: var(--azul-oscuro);
+    font-family: "OpenSans" , sans-serif;
+}

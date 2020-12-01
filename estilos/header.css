@@ -1,0 +1,14 @@
+@import url("fuentesColores.css");
+
+header{
+    background-color: var(--azul-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2%;
+}
+
+button{
+    align-self: flex-end;
+}
+

@@ -1,0 +1,23 @@
+/*  
+ * Fichero que contiene la importación de las fuentes y la declaración de las variables de los colores
+ * Autor: SusanaGE
+ * Fecha: 01-12-2020
+*/
+/*FUENTES*/
+@font-face{
+    font-family: "NotoSerif";
+    src:url(fuentes/NotoSerif-Regular.ttf);
+}
+@font-face{
+    font-family: "OpenSans";
+    src:url(fuentes/OpenSans-Regular.ttf);
+}
+
+:root {
+    /*COLORES*/
+    --azul-oscuro: #041633;
+    --azul-claro: #C4DCFF;
+    --azul: #6897DE;
+    --beige: #FFC756;
+    --gris-claro: #EDEDED;
+}
