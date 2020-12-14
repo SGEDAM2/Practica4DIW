@@ -1,14 +1,159 @@
 @import url("fuentesColores.css");
 
-header{
+header {
+    box-sizing: border-box;
+
+    /*Tamaño*/
+    height: 150px;
+    width: 100%;
+
+    /*Márgenes y paddings*/
+    margin-bottom: 1.5em;
+
+    /*Color*/
     background-color: var(--azul-oscuro);
+
+    /*Distribucción del contenido*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Logo*/
+header img {
+    height: 75%;
+    margin-left: 3%;
+    /*margin: 1em 0;*/
+}
+/*Iconos*/
+header svg {
+    width: 18px;
+    margin-right: 10%;
+}
+
+
+/*Navegación*/
+header nav {
+    /*Tamaño*/
+    height: 25%;
+    width: 100%;
+    /*Márgenes y paddings*/
+    margin: 1em 0;
+    /*Distribucción del contenido*/
+    display: flex;
+}
+
+header nav ul {
+    /*Tamaño*/
+    width: 100%;
+    /*Color*/
+    background-color: var(--azul);
+    /*Sin estilo en la lista*/
+    list-style-type: none;
+    /*Distribucción del contenido*/
     display: flex;
     justify-content: space-between;
+}
+
+header nav a {
+    /*Medidas*/
+    min-width: 150px;
+    height: 100%;
+
+    /*Color*/
+    color: var(--azul-claro);
+
+    /*Texto*/
+    text-shadow: 2px 2px 8px var(--azul-oscuro);
+    text-decoration: none;
+
+    /*Distribucción del contenido*/
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 1em 2%;
 }
 
-button{
-    align-self: flex-end;
+header li a:hover,
+header li a:focus {
+    /*Color*/
+    color: var(--azul);
+    background-color: var(--azul-claro);
+    /*Sombra texto*/
+    text-shadow: 2px 2px 8px var(--azul);
 }
 
+/*Movil*/
+header img~a {
+    display: none;
+}
+
+header nav li:first-of-type,
+header nav li:last-of-type {
+    display: block;
+}
+
+header nav li:nth-of-type(2),
+header nav li:nth-of-type(3) {
+    display: none;
+}
+
+/*Escritorio*/
+@media screen and (min-width:576px) {
+
+    header{
+        justify-content: space-between;
+    }
+
+    /*Acceso*/
+    header img~a {
+        /*Posición*/
+        align-self: flex-end;
+
+        /*Tamaño*/
+        min-height: 25%;
+        width: 10%;
+        min-width: 100px;
+        overflow: auto;
+
+        /*Márgenes y paddings*/
+        margin-right: 3%;
+
+        /*Color*/
+        background-color: #ffffff;
+        color: var(--azul-oscuro);
+
+        /*Fuente*/
+        font-family: var(--sans-serif);
+
+        /*Texto*/
+        /*text-shadow: 2px 4px 15px var(--azul-oscuro);*/
+        /*Distribucción del contenido*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header img~a:focus,
+    header img~a:hover {
+        background-color: var(--beige);
+        /*color:var(--azul);
+    text-shadow: 2px 4px 15px var(--azul);*/
+    }
+
+    /*Navegación*/
+    header nav li:first-of-type,
+    header nav li:last-of-type {
+        display: none;
+    }
+
+    header nav li:nth-of-type(2),
+    header nav li:nth-of-type(3) {
+        display: block;
+    }
+
+    header nav ul {
+        justify-content: flex-start;
+    }
+
+}
