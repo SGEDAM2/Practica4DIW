@@ -21,12 +21,15 @@ header {
 
 /*Logo*/
 header img {
-    height: 75%;
+    /* height: 75%; */
     margin-left: 3%;
     /*margin: 1em 0;*/
 }
 /*Iconos*/
 header svg {
+    width: 18px;
+}
+header>a svg {
     width: 18px;
     margin-right: 10%;
 }
@@ -35,7 +38,7 @@ header svg {
 /*Navegación*/
 header nav {
     /*Tamaño*/
-    height: 25%;
+    /* height: 25%; */
     width: 100%;
     /*Márgenes y paddings*/
     margin: 1em 0;
@@ -58,7 +61,7 @@ header nav ul {
 header nav a {
     /*Medidas*/
     min-width: 150px;
-    height: 100%;
+    height: 2em;
 
     /*Color*/
     color: var(--azul-claro);
@@ -147,8 +150,11 @@ header nav li:nth-of-type(3) {
         display: none;
     }
 
-    header nav li:nth-of-type(2),
+    /* header nav li:nth-of-type(2),
     header nav li:nth-of-type(3) {
+        display: block;
+    } */
+    header nav li.opcion{
         display: block;
     }
 
@@ -157,3 +163,18 @@ header nav li:nth-of-type(3) {
     }
 
 }
+/* 
+.opcionOcultar{
+    display: none;
+}
+
+.opcionMostrar{
+    display: block;
+}
+
+.menuOcultar{
+    height: 150px;
+}
+.menuMostrar{
+    height: 250px;
+} */
