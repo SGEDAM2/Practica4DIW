@@ -1,10 +1,23 @@
 /**
+ * Carrusel de imagenes
+ * 
  * Autor: SusanaGE
  * Fecha:01-12-2020
  */
 //VARIABLES
 //Variable que indica que sección se tiene que mostrar
 let indice = 0;
+let ancho ="60%";
+
+document.addEventListener("DOMContentLoaded", () => {
+  //CARRUSEL
+  //Ocultar todas las secciones
+  ocultarSecciones();
+  //Para que se ejecute la primera vez el carrusel
+  mostrarSeccion();
+  //Que las secciones cambien cada 5 segundos
+  window.setInterval(mostrarSeccion, 3000);
+})
 
 //FUNCIONES
 /**Función que realiza el funcionamiento de "carrusel" de las secciones.
@@ -36,13 +49,3 @@ function ocultarSecciones() {
     elementos[i].style.display = "none";
   }
 }
-
-//Ocultar todas las secciones
-ocultarSecciones();
-
-//Para que se ejecute la primera vez el carrusel
-mostrarSeccion();
-
-//Que las secciones cambien cada 5 segundos
-window.setInterval(mostrarSeccion, 3000);
-
