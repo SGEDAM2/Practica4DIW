@@ -2,10 +2,16 @@
 
 footer{
     /*Tamaño*/
+<<<<<<< HEAD
 /*     height: 200px; */
     /*Márgenes*/
     margin-top: 1.5em;
     padding-bottom: 1em;
+=======
+    height: 200px;
+    /*Márgenes*/
+    margin-top: 1.5em;
+>>>>>>> 60dc1576187a7f9c98acdfce4cd95864eca30e5d
     /*Color*/
     background-color: var(--azul-oscuro);
     font-family: var(--sans-serif) , sans-serif;
@@ -41,7 +47,10 @@ footer nav ul {
     list-style-type: none;
     /*Distribucción del contenido*/
     display: flex;
+<<<<<<< HEAD
     justify-content: center;
+=======
+>>>>>>> 60dc1576187a7f9c98acdfce4cd95864eca30e5d
     flex-wrap: wrap;
 }
 footer nav li{
@@ -74,8 +83,15 @@ footer li a:focus {
     /*Subrayado*/
     text-decoration: underline;
 }
+<<<<<<< HEAD
 
 footer address{
     /*Color*/
     color: var(--azul-claro);
+=======
+@media screen and (min-width: 500px){
+    footer {
+        height: 130px;
+    }
+>>>>>>> 60dc1576187a7f9c98acdfce4cd95864eca30e5d
 }
