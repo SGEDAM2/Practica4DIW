@@ -118,7 +118,7 @@ header nav{
     }
 
     /*Acceso*/
-    header img~a {
+    header #btt_acceso {
         /*Posición*/
         align-self: flex-end;
 
@@ -143,10 +143,36 @@ header nav{
         align-items: center;
 
     }
-
-    header img~a:focus,
-    header img~a:hover {
+    header #btt_acceso:focus,
+    header #btt_acceso:hover {
         background-color: var(--beige);
+    }
+    /*Acceso-usuario*/
+    header #btt_usuario {
+        /*Posición*/
+        align-self: flex-end;
+        /*Tamaño*/
+        min-height: 25%;
+        width: 10%;
+        min-width: 100px;
+        overflow: auto;
+        /*Márgenes y paddings*/
+        margin-right: 3%;
+        /*Color*/
+        color: #ffffff;
+        /*Fuente*/
+        font-family: var(--sans-serif);
+        /*Texto*/
+        text-decoration: underline;
+        /*Distribucción del contenido*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    header #btt_usuario:focus,
+    header #btt_usuario:hover {
+        color: var(--beige);
     }
 
     /*Navegacion*/
