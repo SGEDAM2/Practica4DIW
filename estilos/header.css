@@ -1,8 +1,6 @@
 @import url("fuentesColores.css");
 
 header {
-    box-sizing: border-box;
-
     /*Tamaño*/
     height: 80px;
     width: 100%;
@@ -109,7 +107,7 @@ header nav{
     header{
         justify-content: space-between;
         height: 150px;
-        margin-bottom: 1.5em;
+        /* margin-bottom: 1.5em; */
     }
     
     /*Logo*/

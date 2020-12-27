@@ -1,10 +1,8 @@
 @import url("fuentesColores.css");
 
 footer{
-    /*Tamaño*/
-/*     height: 200px; */
     /*Márgenes*/
-    margin-top: 1.5em;
+    /* margin-top: 1.5em; */
     padding-bottom: 1em;
     /*Color*/
     background-color: var(--azul-oscuro);

@@ -15,44 +15,77 @@
     <link rel="stylesheet" href="../../estilos/header.css">
     <link rel="stylesheet" href="../../estilos/footer.css">
     <style>
-        /*ESTILOS PÁGINA ADMINISTRADOR*/
+        /*ESTILOS PÁGINA ALTA*/
 
-
-        main h2 {
-            margin: 1em 5%;
+        /*Móvil*/
+        form {
+            /*Padding*/
+            padding: 0 1.5em;
+            /*Posicion elementos*/
+            display: flex;
+            flex-direction: column;
         }
-
-        form fieldset fieldset{
+        /*Padding en los fieldset menos en los botones*/
+        form fieldset:not(:last-of-type){
+            padding: 1em 5%;
+        }
+        /*TextBox del fieldset datos*/
+        form input{
+            margin-bottom: 0.5em;
+        }
+        /*Módulos de cada ciclo*/
+        form fieldset fieldset {
+            /*Borde*/
             border: hidden;
+            /*Posicion elementos*/
             display: grid;
+            grid-template-columns: 1fr;
         }
-
-
-        main a {
-            display: block;
-            /*Tamaño*/
-            height: 1.5em;
+        /*Margen entre ciclos*/
+        form fieldset:not(:first-of-type){
+            margin-top: 1em ;
+        }
+        /*Botones vaciar y añadir*/
+        form #botones{
+            /*Borde*/
+            border: hidden;
+            /*Posicion elementos*/
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        form button {
             /*Márgenes y padding*/
-            padding: 1.5em 10%;
-            margin-bottom: 2em;
+            padding: 0.6em 3%;
+            margin-top: 0.5em;
+            margin-left: 3%;
             /*Color*/
             background-color: var(--azul-claro);
             color: var(--azul-oscuro);
-            /*Texto*/
-            text-decoration: none;
-            text-align: center;
             /*Borde*/
-            border-radius: 0.2em;
-            box-shadow: 5px 10px 18px var(--azul-oscuro);
+            border-radius: 0.4em;
+            box-shadow: 7px 7px 18px var(--azul-oscuro);
+            /*Fuente*/
+            font-family: var(--sans-serif), sans-serif;
+            
         }
-
-        main a:hover,
-        main a:focus {
+        form button:hover,
+        form button:focus {
             background-color: var(--azul);
             color: var(--azul-claro)
         }
 
-        @media screen and (min-width: 576px) {}
+        /*Escritorio*/
+        @media screen and (min-width: 576px) {
+            /*Módulos de cada ciclo*/
+            form fieldset fieldset {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            /*Padding en los fieldset menos en los botones*/
+            form fieldset:not(:last-of-type){
+            padding: 1em 2%;
+        }
+        }
     </style>
 </head>
 
@@ -80,18 +113,62 @@
                         Desarrollo de aplicaciones web</label>
                 </legend>
                 <fieldset id="fs-daw" class="fs">
-                    <label><input type="checkbox" name="daw" value="daw-pr">Programación</label>
-                    <label><input type="checkbox" name="daw" value="daw-si">Sistemas informáticos</label>
-                    <label><input type="checkbox" name="daw" value="daw-bd">Bases de datos</label>
-                    <label><input type="checkbox" name="daw" value="daw-lm">Lenguaje de marcas</label>
-                    <label><input type="checkbox" name="daw" value="daw-ed">Entornos de desarrollo</label>
-                    <label><input type="checkbox" name="daw" value="daw-fol">Formación y orientación laboral</label>
-                    <label><input type="checkbox" name="daw" value="daw-daw">Despliegue de aplicaciones web</label>
-                    <label><input type="checkbox" name="daw" value="daw-des">Desarrollo web en entorno cliente</label>
-                    <label><input type="checkbox" name="daw" value="daw-dec">Desarrollo web en entorno servidor</label>
-                    <label><input type="checkbox" name="daw" value="daw-diw">Diseño de interfaces web</label>
-                    <label><input type="checkbox" name="daw" value="daw-eie">Empresa e iniciativa emprendedora</label>
+                    <label><input type="checkbox" name="daw" value="daw-pr"> Programación</label>
+                    <label><input type="checkbox" name="daw" value="daw-si"> Sistemas informáticos</label>
+                    <label><input type="checkbox" name="daw" value="daw-bd"> Bases de datos</label>
+                    <label><input type="checkbox" name="daw" value="daw-lm"> Lenguaje de marcas</label>
+                    <label><input type="checkbox" name="daw" value="daw-ed"> Entornos de desarrollo</label>
+                    <label><input type="checkbox" name="daw" value="daw-fol"> Formación y orientación laboral</label>
+                    <label><input type="checkbox" name="daw" value="daw-daw"> Despliegue de aplicaciones web</label>
+                    <label><input type="checkbox" name="daw" value="daw-des"> Desarrollo web en entorno cliente</label>
+                    <label><input type="checkbox" name="daw" value="daw-dec"> Desarrollo web en entorno servidor</label>
+                    <label><input type="checkbox" name="daw" value="daw-diw"> Diseño de interfaces web</label>
+                    <label><input type="checkbox" name="daw" value="daw-eie"> Empresa e iniciativa emprendedora</label>
                 </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <label><input type="checkbox" id="dam" onchange="mostrarOpciones(this)">
+                        Desarrollo de aplicaciones multimedia</label>
+                </legend>
+                <fieldset id="fs-dam" class="fs">
+                    <label><input type="checkbox" name="dam" value="dam-pr"> Programación</label>
+                    <label><input type="checkbox" name="dam" value="dam-si"> Sistemas informáticos</label>
+                    <label><input type="checkbox" name="dam" value="dam-bd"> Bases de datos</label>
+                    <label><input type="checkbox" name="dam" value="dam-lm"> Lenguaje de marcas</label>
+                    <label><input type="checkbox" name="dam" value="dam-ed"> Entornos de desarrollo</label>
+                    <label><input type="checkbox" name="dam" value="dam-fol"> Formación y orientación laboral</label>
+                    <label><input type="checkbox" name="dam" value="dam-ad"> Acceso a datos</label>
+                    <label><input type="checkbox" name="dam" value="dam-di"> Desarrollo de interfaces</label>
+                    <label><input type="checkbox" name="dam" value="dam-psp"> Programación de servicios y procesos</label>
+                    <label><input type="checkbox" name="dam" value="dam-pmm"> Programación multimedia y dispositivos móviles</label>
+                    <label><input type="checkbox" name="dam" value="dam-sge"> Sistemas de gestión empresarial</label>
+                    <label><input type="checkbox" name="dam" value="dam-eie"> Empresa e iniciativa emprendedora</label>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <label><input type="checkbox" id="asir" onchange="mostrarOpciones(this)">
+                        Administración de Sistemas Informáticos en Red</label>
+                </legend>
+                <fieldset id="fs-asir" class="fs">
+                    <label><input type="checkbox" name="asir" value="asir-iso"> Implantación de Sistemas Operativos</label>
+                    <label><input type="checkbox" name="asir" value="asir-par"> Planificación y Administrador de Redes</label>
+                    <label><input type="checkbox" name="asir" value="asir-fh"> Fundamentos de Hardware</label>
+                    <label><input type="checkbox" name="asir" value="asir-gbd"> Gestión de Bases de Datos</label>
+                    <label><input type="checkbox" name="asir" value="asir-lm"> Lenguajes de Marcas y Sistemas de Gestión de Información</label>
+                    <label><input type="checkbox" name="asir" value="asir-fol"> Formación y orientación laboral</label>
+                    <label><input type="checkbox" name="asir" value="asir-aso"> Administración de Sistemas Operativos</label>
+                    <label><input type="checkbox" name="asir" value="asir-sri"> Servicios de Red e Internet</label>
+                    <label><input type="checkbox" name="asir" value="asir-iaw"> Implantación de Aplicaciones Web</label>
+                    <label><input type="checkbox" name="asir" value="asir-asgbd"> Administración de Sistemas Gestores de Bases de Datos</label>
+                    <label><input type="checkbox" name="asir" value="asir-sad"> Seguridad y Alta Disponibilidad</label>
+                    <label><input type="checkbox" name="asir" value="asir-eie"> Empresa e iniciativa emprendedora</label>
+                </fieldset>
+            </fieldset>
+            <fieldset id="botones">
+                <button type="reset">Vaciar</button>
+                <button type="submit">Añadir</button>
             </fieldset>
         </form>
     </main>

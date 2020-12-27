@@ -1,6 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
 body {
     background-color: var(--gris-claro);
     font-family: var(--sans-serif), sans-serif;
 
-    height: 600px;
+    display: grid;
+    grid-template-rows: 80px 4fr 1fr;
+    grid-template-areas: "header" "main" "footer";
+}
+header-admin-component{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+    padding-bottom: 1.5em;
+}
+footer-component{
+    grid-area:footer;
+}
+footer{
+    height: 100%;
+}
+main h2 {
+    margin: 0.7em 3%;
+}
+
+/*Escritorio*/
+@media screen and (min-width:576px) {
+    body{
+        grid-template-rows: 170px 4fr 1fr;
+    }
 }
