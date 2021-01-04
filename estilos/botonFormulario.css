@@ -1,0 +1,19 @@
+form button {
+    /*Márgenes y padding*/
+    padding: 0.4em 3%;
+    margin-top: 0.5em;
+    margin-left: 3%;
+    /*Color*/
+    background-color: var(--azul-claro);
+    color: var(--azul-oscuro);
+    /*Borde*/
+    border-radius: 0.4em;
+    /*Fuente*/
+    font-family: var(--sans-serif), sans-serif;
+    
+}
+form button:hover,
+form button:focus {
+    background-color: var(--azul);
+    color: var(--azul-claro)
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.I.F.P. Atenea - Inicio de sesión</title>
+    <!--Estilo-->
+    <link rel="stylesheet" href="estilos/fuentesColores.css">
+    <link rel="stylesheet" href="estilos/clear.css">
+    <link rel="stylesheet" href="estilos/botonFormulario.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        /*Móvil*/
+        body {
+            /*Posición elementos*/
+            display: grid;
+            grid-template-columns: 1fr;
+
+        }
+
+        /*Sección 1*/
+        section:first-of-type {
+            display: none;
+        }
+
+        /*Sección 2*/
+        section:last-of-type {
+            /*Márgenes y paddings*/
+            padding: 0 3%;
+            /*Color*/
+            background-color: var(--azul-claro);
+            /*Posición elementos*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section:last-of-type h3{
+            display: block;
+        }
+        section:last-of-type img {
+           
+            /*Tamaño*/
+            width: 25%;
+            /*Márgenes y paddings*/
+            padding-bottom: 1em;
+        }
+
+        section:last-of-type a {
+            /*Color*/
+            color: var(--azul-oscuro);
+            /*Posicionamiento componentes*/
+            display: flex;
+            justify-content: center;
+        }
+
+        section:last-of-type a:hover,
+        section:last-of-type a:focus {
+            color: var(--azul);
+            text-decoration: underline;
+        }
+
+        form {
+            box-sizing: border-box;
+            /*Tamaño*/
+            width: 95%;
+        }
+
+        fieldset {
+            /*Color*/
+            background-color: var(--beige);
+            /*Borde*/
+            border: none;
+            border-radius: 0.5em;
+            /*Posicion elementos*/
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*Campos*/
+        section:last-of-type p:not(:last-of-type) {
+            /*Márgen*/
+            margin: 1em 5%;
+            /*Posicionamiento elementos*/
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        section:last-of-type p:last-of-type {
+            margin: 0 5% 1em auto;
+        }
+
+        /*Boton*/
+        #iniciar {
+            /*Ancho*/
+            width: 30%;
+            /*Márgenes y paddings*/
+            margin: 0 5% 1em 0;
+            /*Color*/
+            background-color: var(--gris-claro);
+            /*Posición elementos*/
+            align-self: flex-end;
+        }
+
+        #iniciar:hover,
+        #iniciar:focus {
+            background-color: var(--azul);
+        }
+
+        /*Escritorio*/
+        @media screen and (min-width: 576px) {
+            body {
+                /*Posición elementos*/
+                grid-template-columns: 65% 35%;
+            }
+
+            section {
+                min-width: 350px;
+            }
+
+            /*Sección 1*/
+            section:first-of-type {
+                display: block;
+                /*Color*/
+                background-color: var(--azul-oscuro);
+                /*Posición elementos*/
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+            }
+            section:first-of-type img{
+                width: 73%;
+            }
+            section:first-of-type h1{
+                color: #ffffff;
+            }
+
+            /*Sección 2*/
+            section:last-of-type {
+                background-color: var(--gris-claro);
+            }
+
+            section:last-of-type h3 {
+                display: none;
+            }
+
+            fieldset {
+                background-color: var(--gris-claro);
+            }
+
+            /*Boton*/
+            #iniciar {
+                /*Color*/
+                background-color: var(--azul-claro);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <a href="inicio.html"><img src="imagenes/logo-buho2.png" alt="C.I.F.P. Atenea"></a>
+        <h1>C.I.F.P. Atenea</h1>
+    </section>
+    <section>
+        <h3><a href="inicio.html"><img src="imagenes/logo-buho.png" alt="C.I.F.P. Atenea"></a></h3>
+
+        <form method="POST" autocomplete="off">
+
+            <fieldset>
+                <!-- <legend><h2>Iniciar sesión</h2></legend> -->
+                <p><label for="usuario">Usuario: </label>
+                    <input type="text" name=usuario id="usuario"></p>
+                <p><label for="contrasenia">Contraseña: </label>
+                    <input type="password" name="contrasenia" id="contrasenia"></p>
+                <p><a href="">¿Has olvidado la contraseña?</a></p>
+                <button type="submit" name="iniciar" id="iniciar">Iniciar</button>
+            </fieldset>
+
+        </form>
+    </section>
+</body>
+
+</html>
