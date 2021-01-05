@@ -27,14 +27,12 @@
             display: flex;
             flex-direction: column;
         }
+
         /*Padding en los fieldset menos en los botones*/
-        form fieldset:not(:last-of-type){
+        form fieldset:not(:last-of-type) {
             padding: 1em 5%;
         }
-        /*TextBox del fieldset datos*/
-        form input{
-            margin-bottom: 0.5em;
-        }
+
         /*Módulos de cada ciclo*/
         form fieldset fieldset {
             /*Borde*/
@@ -43,12 +41,14 @@
             display: grid;
             grid-template-columns: 1fr;
         }
+
         /*Margen entre ciclos*/
-        form fieldset:not(:first-of-type){
-            margin-top: 1em ;
+        form fieldset:not(:first-of-type) {
+            margin-top: 1em;
         }
+
         /*Botones vaciar y añadir*/
-        form #botones{
+        form #botones {
             /*Borde*/
             border: hidden;
             /*Posicion elementos*/
@@ -56,17 +56,48 @@
             flex-direction: row;
             justify-content: flex-end;
         }
-        
+
+        /*Distribución campos del fieldset datos*/
+        form div:not(:last-of-type) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+        }
+        form div:not(:last-of-type) label {
+            margin: 0 3% 0.8em 0;
+        }
+        form div:not(:last-of-type) span {
+            display: inline-block;
+            width: 30%;
+            min-width: 80px;
+        }
+        form div:not(:last-of-type) input{
+            display: inline-block;
+            width: 60%;
+            min-width: 240px;
+        }
+
         /*Escritorio*/
         @media screen and (min-width: 576px) {
+
             /*Módulos de cada ciclo*/
             form fieldset fieldset {
                 grid-template-columns: 1fr 1fr 1fr;
             }
+
             /*Padding en los fieldset menos en los botones*/
-            form fieldset:not(:last-of-type){
-            padding: 1em 2%;
-        }
+            form fieldset:not(:last-of-type) {
+                padding: 1em 2%;
+            }
+            /*Distribución campos del fieldset datos*/
+            form div:not(:last-of-type) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
+            } 
+            form div:not(:last-of-type) span {
+                display: inline;
+            }
         }
     </style>
 </head>
@@ -78,12 +109,17 @@
         <form method="post">
             <fieldset>
                 <legend>Datos</legend>
-                <div><label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" required></div>
-                <div><label for="apellido1">Apellido 1:</label>
-                    <input type="text" name="apellido1" id="apellido1"></div>
-                <div><label for="apellido2">Apellido 2:</label>
-                    <input type="text" name="apellido2" id="apellido2"></div>
+                <div>
+                    <label for="nombre"><span>Nombre:</span> <input type="text" name="nombre" id="nombre" required> </label>
+                    <label for="apellido1"><span>Apellido 1:</span> <input type="text" name="apellido1" id="apellido1"></label>
+                    <label for="apellido2"><span>Apellido 2:</span> <input type="text" name="apellido2" id="apellido2"></label>
+                </div>
+                <div>
+                    <label for="direccion"><span>Dirección:</span> <input type="text" name="direccion" id="direccion"></label>   
+                    <label for="telefono"><span>Teléfono:</span> <input type="tel" name="telefono" id="telefono"></label>
+                    <label for="email"><span>Email:</span> <input type="email" name="email" id="email"></label>
+                    
+                </div>
                 <div><label for="alumno"> Alumno</label>
                     <input type="radio" name="tipo" id="alumno" value="alumno" checked>
                     <label for="profesor">Profesor</label>
@@ -122,8 +158,10 @@
                     <label><input type="checkbox" name="dam" value="dam-fol"> Formación y orientación laboral</label>
                     <label><input type="checkbox" name="dam" value="dam-ad"> Acceso a datos</label>
                     <label><input type="checkbox" name="dam" value="dam-di"> Desarrollo de interfaces</label>
-                    <label><input type="checkbox" name="dam" value="dam-psp"> Programación de servicios y procesos</label>
-                    <label><input type="checkbox" name="dam" value="dam-pmm"> Programación multimedia y dispositivos móviles</label>
+                    <label><input type="checkbox" name="dam" value="dam-psp"> Programación de servicios y
+                        procesos</label>
+                    <label><input type="checkbox" name="dam" value="dam-pmm"> Programación multimedia y dispositivos
+                        móviles</label>
                     <label><input type="checkbox" name="dam" value="dam-sge"> Sistemas de gestión empresarial</label>
                     <label><input type="checkbox" name="dam" value="dam-eie"> Empresa e iniciativa emprendedora</label>
                 </fieldset>
@@ -134,18 +172,24 @@
                         Administración de Sistemas Informáticos en Red</label>
                 </legend>
                 <fieldset id="fs-asir" class="fs">
-                    <label><input type="checkbox" name="asir" value="asir-iso"> Implantación de Sistemas Operativos</label>
-                    <label><input type="checkbox" name="asir" value="asir-par"> Planificación y Administrador de Redes</label>
+                    <label><input type="checkbox" name="asir" value="asir-iso"> Implantación de Sistemas
+                        Operativos</label>
+                    <label><input type="checkbox" name="asir" value="asir-par"> Planificación y Administrador de
+                        Redes</label>
                     <label><input type="checkbox" name="asir" value="asir-fh"> Fundamentos de Hardware</label>
                     <label><input type="checkbox" name="asir" value="asir-gbd"> Gestión de Bases de Datos</label>
-                    <label><input type="checkbox" name="asir" value="asir-lm"> Lenguajes de Marcas y Sistemas de Gestión de Información</label>
+                    <label><input type="checkbox" name="asir" value="asir-lm"> Lenguajes de Marcas y Sistemas de Gestión
+                        de Información</label>
                     <label><input type="checkbox" name="asir" value="asir-fol"> Formación y orientación laboral</label>
-                    <label><input type="checkbox" name="asir" value="asir-aso"> Administración de Sistemas Operativos</label>
+                    <label><input type="checkbox" name="asir" value="asir-aso"> Administración de Sistemas
+                        Operativos</label>
                     <label><input type="checkbox" name="asir" value="asir-sri"> Servicios de Red e Internet</label>
                     <label><input type="checkbox" name="asir" value="asir-iaw"> Implantación de Aplicaciones Web</label>
-                    <label><input type="checkbox" name="asir" value="asir-asgbd"> Administración de Sistemas Gestores de Bases de Datos</label>
+                    <label><input type="checkbox" name="asir" value="asir-asgbd"> Administración de Sistemas Gestores de
+                        Bases de Datos</label>
                     <label><input type="checkbox" name="asir" value="asir-sad"> Seguridad y Alta Disponibilidad</label>
-                    <label><input type="checkbox" name="asir" value="asir-eie"> Empresa e iniciativa emprendedora</label>
+                    <label><input type="checkbox" name="asir" value="asir-eie"> Empresa e iniciativa
+                        emprendedora</label>
                 </fieldset>
             </fieldset>
             <fieldset id="botones">

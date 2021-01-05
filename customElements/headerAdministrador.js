@@ -20,14 +20,14 @@ class HeaderAdmin extends HTMLElement {
                 </path>
             </svg></a>
         <!--Logo-->
-        <img src="../../imagenes/logo.png" alt="C.I.F.P Atenea"
+        <a id="logo" href="administrador.html"> <img src="../../imagenes/logo.png" alt="C.I.F.P Atenea"
         onError="this.onerror=null;        
         if (this.src != '../../imagenes/logo.png') {
             this.src='../imagenes/logo.png';
         }
         if (this.src != '../imagenes/logo.png') {
             this.src='imagenes/logo.png';
-        }">
+        }"></img></a>
         <!--Nombre usuario-->
         <a id=btt_usuario>
             <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user"
