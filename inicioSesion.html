@@ -1,6 +1,9 @@
+<!--
+    Autor: SusanaGE
+    Fecha: 05-01-2021
+-->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,67 +17,45 @@
         body {
             height: 100%;
         }
-
         /*Móvil*/
         body {
             /*Posición elementos*/
             display: grid;
             grid-template-columns: 1fr;
-
         }
-
         /*Sección 1*/
         section:first-of-type {
             display: none;
         }
-
         /*Sección 2*/
         section:last-of-type {
             /*Márgenes y paddings*/
-            padding: 0 3%;
+            padding: 5em 3% 0 3%;
             /*Color*/
-            background-color: var(--azul-claro);
+            background-color: var(--azul-oscuro);
             /*Posición elementos*/
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
-
         section:last-of-type h3{
             display: block;
         }
-        section:last-of-type img {
-           
+        section:last-of-type img {         
             /*Tamaño*/
             width: 25%;
             /*Márgenes y paddings*/
             padding-bottom: 1em;
         }
-
-        section:last-of-type a {
-            /*Color*/
-            color: var(--azul-oscuro);
-            /*Posicionamiento componentes*/
-            display: flex;
-            justify-content: center;
-        }
-
-        section:last-of-type a:hover,
-        section:last-of-type a:focus {
-            color: var(--azul);
-            text-decoration: underline;
-        }
-
         form {
             box-sizing: border-box;
             /*Tamaño*/
             width: 95%;
+            min-width: 300px;
         }
-
         fieldset {
             /*Color*/
-            background-color: var(--beige);
+            background-color: var(--azul-claro);
             /*Borde*/
             border: none;
             border-radius: 0.5em;
@@ -82,7 +63,6 @@
             display: flex;
             flex-direction: column;
         }
-
         /*Campos*/
         section:last-of-type p:not(:last-of-type) {
             /*Márgen*/
@@ -91,11 +71,22 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
         }
-
+        /*Texto*/
         section:last-of-type p:last-of-type {
-            margin: 0 5% 1em auto;
+            margin: 0 auto 1em 5% ;
         }
-
+        /*Todos los enlaces (has olvidado la contraseña y logo búho)*/
+        section:last-of-type a {
+            /*Color*/
+            color: var(--azul-oscuro);
+            /*Posicionamiento componentes*/
+            display: flex;
+            justify-content: center;
+        }
+        section:last-of-type a:hover,
+        section:last-of-type a:focus {
+            color: var(--beige);
+        }
         /*Boton*/
         #iniciar {
             /*Ancho*/
@@ -107,7 +98,6 @@
             /*Posición elementos*/
             align-self: flex-end;
         }
-
         #iniciar:hover,
         #iniciar:focus {
             background-color: var(--azul);
@@ -119,40 +109,33 @@
                 /*Posición elementos*/
                 grid-template-columns: 65% 35%;
             }
-
             section {
                 min-width: 350px;
             }
-
             /*Sección 1*/
             section:first-of-type {
                 display: block;
-                /*Color*/
+                /*Fondo*/
+                background-image: url("imagenes/logo-buho2.png");
+                background-size: 150px;
                 background-color: var(--azul-oscuro);
-                /*Posición elementos*/
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-            }
-            section:first-of-type img{
-                width: 73%;
             }
             section:first-of-type h1{
                 color: #ffffff;
+                font-family: var(--serif);
+                display: none;
             }
-
             /*Sección 2*/
             section:last-of-type {
                 background-color: var(--gris-claro);
+                flex-direction: row;
             }
-
             section:last-of-type h3 {
                 display: none;
             }
-
             fieldset {
                 background-color: var(--gris-claro);
             }
-
             /*Boton*/
             #iniciar {
                 /*Color*/
@@ -164,16 +147,12 @@
 
 <body>
     <section>
-        <a href="inicio.html"><img src="imagenes/logo-buho2.png" alt="C.I.F.P. Atenea"></a>
         <h1>C.I.F.P. Atenea</h1>
     </section>
     <section>
         <h3><a href="inicio.html"><img src="imagenes/logo-buho.png" alt="C.I.F.P. Atenea"></a></h3>
-
         <form method="POST" autocomplete="off">
-
             <fieldset>
-                <!-- <legend><h2>Iniciar sesión</h2></legend> -->
                 <p><label for="usuario">Usuario: </label>
                     <input type="text" name=usuario id="usuario"></p>
                 <p><label for="contrasenia">Contraseña: </label>
@@ -181,7 +160,6 @@
                 <p><a href="">¿Has olvidado la contraseña?</a></p>
                 <button type="submit" name="iniciar" id="iniciar">Iniciar</button>
             </fieldset>
-
         </form>
     </section>
 </body>
