@@ -32,7 +32,7 @@
             /*Márgenes y paddings*/
             padding: 5em 3% 0 3%;
             /*Color*/
-            background-color: var(--azul-oscuro);
+            background-color: var(--gris-claro);
             /*Posición elementos*/
             display: flex;
             flex-direction: column;
@@ -54,6 +54,7 @@
             min-width: 300px;
         }
         fieldset {
+            padding: 1em 0;
             /*Color*/
             background-color: var(--azul-claro);
             /*Borde*/
@@ -66,17 +67,22 @@
         /*Campos*/
         section:last-of-type p:not(:last-of-type) {
             /*Márgen*/
-            margin: 1em 5%;
+            margin: 1em 8%;
             /*Posicionamiento elementos*/
             display: grid;
             grid-template-columns: 1fr 2fr;
         }
+        input{
+            margin-left: 5%;
+            width: 90%;
+        }
         /*Texto*/
         section:last-of-type p:last-of-type {
-            margin: 0 auto 1em 5% ;
+            margin: 0 auto 1em 8% ;
         }
         /*Todos los enlaces (has olvidado la contraseña y logo búho)*/
         section:last-of-type a {
+            font-size: 0.8em;
             /*Color*/
             color: var(--azul-oscuro);
             /*Posicionamiento componentes*/
@@ -85,14 +91,15 @@
         }
         section:last-of-type a:hover,
         section:last-of-type a:focus {
-            color: var(--beige);
+            color: var(--azul);
         }
         /*Boton*/
         #iniciar {
+            font-size: 1em;
             /*Ancho*/
             width: 30%;
             /*Márgenes y paddings*/
-            margin: 0 5% 1em 0;
+            margin: 0 8% 1em 0;
             /*Color*/
             background-color: var(--gris-claro);
             /*Posición elementos*/
@@ -107,7 +114,7 @@
         @media screen and (min-width: 576px) {
             body {
                 /*Posición elementos*/
-                grid-template-columns: 65% 35%;
+                grid-template-columns: 60% 40%;
             }
             section {
                 min-width: 350px;
@@ -115,9 +122,13 @@
             /*Sección 1*/
             section:first-of-type {
                 display: block;
+                min-width: 200px;
                 /*Fondo*/
-                background-image: url("imagenes/logo-buho2.png");
-                background-size: 150px;
+                background-image: url("imagenes/logoGrande.png");
+                background-repeat: no-repeat;
+                background-size: 60%;
+                background-position-y:center;
+                background-position-x:center;
                 background-color: var(--azul-oscuro);
             }
             section:first-of-type h1{
@@ -126,6 +137,10 @@
                 display: none;
             }
             /*Sección 2*/
+            form{
+                display: flex;
+                justify-content: center;
+            }
             section:last-of-type {
                 background-color: var(--gris-claro);
                 flex-direction: row;
@@ -135,6 +150,7 @@
             }
             fieldset {
                 background-color: var(--gris-claro);
+                width: 90%;
             }
             /*Boton*/
             #iniciar {
