@@ -1,15 +1,11 @@
-*{
-    box-sizing: border-box;
-}
-html,body{
-    height: 100%;
-}
+/*
+    Autor:SusanaGE
+    Fecha:03-02-2021
+*/
+/*Estructura de la página*/
 body {
-    background-color: var(--gris-claro);
-    font-family: var(--sans-serif), sans-serif;
-
     display: grid;
-    grid-template-rows: 80px 4fr 1fr;
+    grid-template-rows: 90px 4fr 1fr;
     grid-template-areas: "header" "main" "footer";
 }
 header-admin-component{
@@ -22,16 +18,17 @@ main{
 footer-component{
     grid-area:footer;
 }
-footer{
-    height: 100%;
+h2 {
+    margin-top:2em;
+    margin-left: 3%;
+    margin-bottom: 0.7em;
 }
-main h2 {
-    margin: 0.7em 3%;
-}
-
 /*Escritorio*/
 @media screen and (min-width:576px) {
     body{
         grid-template-rows: 170px 4fr 1fr;
+    }
+    h2{
+        margin-top:1em;
     }
 }

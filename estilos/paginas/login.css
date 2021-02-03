@@ -1,0 +1,130 @@
+/*
+    Autor:SusanaGE
+    Fecha:05-01-2021
+*/
+/**Móvil**/
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/*Sección 1*/
+section:first-of-type {
+    display: none;
+}
+/*Sección 2*/
+section:last-of-type {
+    padding: 5em 3% 0 3%;
+    background-color: var(--gris-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section:last-of-type h3{
+    display: block;
+}
+section:last-of-type img {         
+    width: 25%;
+    margin-bottom: 1em;
+}
+form {
+    box-sizing: border-box;
+    width: 95%;
+}
+fieldset { 
+    background-color: var(--azul-claro);
+    border: none;
+    border-radius: 0.5em;
+    /*Posicion elementos*/
+    display: flex;
+    flex-direction: column;
+}
+/*Campos*/
+section:last-of-type p:not(:last-of-type) {
+    margin: 1em 8%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+input{
+    margin-left: 5%;
+    width: 90%;
+    height: 2em;
+}
+/*Texto*/
+section:last-of-type p:last-of-type {
+    margin: 0 auto 1em 8% ;
+}
+/*Todos los enlaces (has olvidado la contraseña y logo búho)*/
+section:last-of-type a {
+    font-size: 0.8em;
+    color: var(--azul-oscuro);
+    display: flex;
+    justify-content: center;
+}
+section:last-of-type a:hover,
+section:last-of-type a:focus {
+    color: var(--azul);
+}
+/*Boton*/
+#iniciar {
+    font-size: 1em;
+    width: 30%;
+    margin: 0 10% 1em 0;
+    background-color: var(--gris-claro);
+    align-self: flex-end;
+}
+#iniciar:hover,
+#iniciar:focus {
+    background-color: var(--azul);
+}
+
+/*Tablet*/
+@media screen and (min-width: 576px){
+    body {
+        grid-template-columns: 40% 60%;
+    }
+    /*Sección 1*/
+    section:first-of-type {
+        display: block;
+        background-image: url("../../imagenes/logoGrande.png");
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position-y:center;
+        background-position-x:center;
+        background-color: var(--azul-oscuro);
+    }
+    section:first-of-type h1{
+        display: none;
+    }
+    /*Sección 2*/
+    form{
+        display: flex;
+        justify-content: center;
+    }
+    section:last-of-type {
+        background-color: var(--gris-claro);
+        flex-direction: row;
+    }
+    section:last-of-type h3 {
+        display: none;
+    }
+    fieldset {
+        background-color: var(--gris-claro);
+        width: 100%;
+    }
+    #iniciar {
+        background-color: var(--azul-claro);
+    }
+    #iniciar:hover,
+    #iniciar:focus {
+        color: #ffffff;
+    }
+
+}
+/**Escritorio**/
+@media screen and (min-width: 768px) {
+    body {
+        grid-template-columns: 60% 40%;
+    }
+    
+}

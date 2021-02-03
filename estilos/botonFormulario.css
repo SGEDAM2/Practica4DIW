@@ -3,21 +3,19 @@
     Fecha: 04-01-2021
 */
 form button {
-    /*Márgenes y padding*/
     padding: 0.4em 3%;
     margin-top: 0.5em;
     margin-left: 3%;
-    /*Color*/
     background-color: var(--azul-claro);
     color: var(--azul-oscuro);
-    /*Borde*/
     border-radius: 0.4em;
-    /*Fuente*/
     font-family: var(--sans-serif), sans-serif;
-    
+    box-shadow: 2px 3px 10px var(--azul-oscuro);
+    transition: background-color 0.5s linear;
 }
 form button:hover,
 form button:focus {
     background-color: var(--azul);
-    color: var(--azul-claro)
+    color: #ffffff;
+    box-shadow: 0 1px 2px var(--azul-oscuro);
 }
