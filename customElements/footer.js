@@ -31,10 +31,10 @@ class Footer extends HTMLElement {
         }"></a>
         <nav>
             <ul>
-                <li><a>Acerca de</a> </li>
-                <li><a>Ayuda</a></li>
-                <li><a>Política de cookies</a></li>
-                <li><a>Privacidad</a></li>
+                <li><a href="">Acerca de</a> </li>
+                <li><a href="">Ayuda</a></li>
+                <li><a href="">Política de cookies</a></li>
+                <li><a href="">Privacidad</a></li>
             </ul>
         </nav>
         <address>

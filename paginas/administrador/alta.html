@@ -1,3 +1,7 @@
+<!--
+    Autor: SusanaGE
+    Fecha: 20-02-2021
+-->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,90 +20,7 @@
     <link rel="stylesheet" href="../../estilos/header.css">
     <link rel="stylesheet" href="../../estilos/footer.css">
     <link rel="stylesheet" href="../../estilos/botonFormulario.css">
-    <style>
-        /*ESTILOS PÁGINA ALTA*/
-
-        /*Móvil*/
-        form {
-            /*Padding*/
-            padding: 0 1.5em;
-            /*Posicion elementos*/
-            display: flex;
-            flex-direction: column;
-        }
-
-        /*Padding en los fieldset menos en los botones*/
-        form fieldset:not(:last-of-type) {
-            padding: 1em 5%;
-        }
-
-        /*Módulos de cada ciclo*/
-        form fieldset fieldset {
-            /*Borde*/
-            border: hidden;
-            /*Posicion elementos*/
-            display: grid;
-            grid-template-columns: 1fr;
-        }
-
-        /*Margen entre ciclos*/
-        form fieldset:not(:first-of-type) {
-            margin-top: 1em;
-        }
-
-        /*Botones vaciar y añadir*/
-        form #botones {
-            /*Borde*/
-            border: hidden;
-            /*Posicion elementos*/
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-
-        /*Distribución campos del fieldset datos*/
-        form div:not(:last-of-type) {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, 1fr);
-        }
-        form div:not(:last-of-type) label {
-            margin: 0 3% 0.8em 0;
-        }
-        form div:not(:last-of-type) span {
-            display: inline-block;
-            width: 30%;
-            min-width: 80px;
-        }
-        form div:not(:last-of-type) input{
-            display: inline-block;
-            width: 60%;
-            min-width: 240px;
-        }
-
-        /*Escritorio*/
-        @media screen and (min-width: 576px) {
-
-            /*Módulos de cada ciclo*/
-            form fieldset fieldset {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-
-            /*Padding en los fieldset menos en los botones*/
-            form fieldset:not(:last-of-type) {
-                padding: 1em 2%;
-            }
-            /*Distribución campos del fieldset datos*/
-            form div:not(:last-of-type) {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: 1fr;
-            } 
-            form div:not(:last-of-type) span {
-                display: inline;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../estilos/paginas/alta.css">
 </head>
 
 <body>
@@ -110,20 +31,24 @@
             <fieldset>
                 <legend>Datos</legend>
                 <div>
-                    <label for="nombre"><span>Nombre:</span> <input type="text" name="nombre" id="nombre" required> </label>
-                    <label for="apellido1"><span>Apellido 1:</span> <input type="text" name="apellido1" id="apellido1"></label>
-                    <label for="apellido2"><span>Apellido 2:</span> <input type="text" name="apellido2" id="apellido2"></label>
-                </div>
-                <div>
-                    <label for="direccion"><span>Dirección:</span> <input type="text" name="direccion" id="direccion"></label>   
-                    <label for="telefono"><span>Teléfono:</span> <input type="tel" name="telefono" id="telefono"></label>
+                    <label for="nombre"><span>Nombre:</span> <input type="text" name="nombre" id="nombre" required>
+                    </label>
+                    <label for="apellido1"><span>Apellido 1:</span> <input type="text" name="apellido1"
+                            id="apellido1"></label>
+                    <label for="apellido2"><span>Apellido 2:</span> <input type="text" name="apellido2"
+                            id="apellido2"></label>
+                    <label for="direccion"><span>Dirección:</span> <input type="text" name="direccion"
+                            id="direccion"></label>
+                    <label for="telefono"><span>Teléfono:</span> <input type="tel" name="telefono"
+                            id="telefono"></label>
                     <label for="email"><span>Email:</span> <input type="email" name="email" id="email"></label>
-                    
+                    <div>
+                        <label for="alumno"> Alumno <input type="radio" name="tipo" id="alumno" value="alumno"
+                                checked></label>
+                        <label for="profesor">Profesor <input type="radio" name="tipo" id="profesor"
+                                value="profesor"></label>
+                    </div>
                 </div>
-                <div><label for="alumno"> Alumno</label>
-                    <input type="radio" name="tipo" id="alumno" value="alumno" checked>
-                    <label for="profesor">Profesor</label>
-                    <input type="radio" name="tipo" id="profesor" value="profesor"></div>
             </fieldset>
             <fieldset>
                 <legend>
