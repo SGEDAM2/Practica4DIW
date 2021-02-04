@@ -10,6 +10,7 @@ form button {
     color: var(--azul-oscuro);
     border-radius: 0.4em;
     font-family: var(--sans-serif), sans-serif;
+    font-size: 1em;
     box-shadow: 2px 3px 10px var(--azul-oscuro);
     transition: background-color 0.5s linear,box-shadow 0.5s ease;
 }

@@ -43,7 +43,7 @@ class HeaderAdmin extends HTMLElement {
         <nav id="navegacion">
             <ul id="lista">
                 <li class="opcion"><a href="administrador.html">INICIO</a></li>
-                <li class="opcion"><a href="">USUARIOS</a></li>
+                <li class="opcion"><a href="usuarios.html">USUARIOS</a></li>
                 <li class="opcion"><a href="alta.html">ALTA</a></li>
                 <li class="opcion"><a href="">BAJA</a></li>
                 <li id="acceso"> <a>

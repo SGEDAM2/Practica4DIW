@@ -1,0 +1,29 @@
+/*
+    Autor:SusanaGE
+    Fecha:04-02-2020
+*/
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+    max-width: 90%;
+    font-size: 0.9em;
+}
+th,td{
+    border: 1px solid var(--azul-oscuro);
+    width: 15%;
+}
+th{
+    background-color: var(--azul-oscuro);
+    color: #ffffff;
+}
+td{
+    padding:0.3em 1%;
+}
+td:last-of-type{
+    text-align: center;
+}
+svg{
+    height: 22px;
+    width: 22px;
+}
