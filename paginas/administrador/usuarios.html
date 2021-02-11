@@ -18,18 +18,23 @@
     <link rel="stylesheet" href="../../estilos/header.css">
     <link rel="stylesheet" href="../../estilos/footer.css">
     <link rel="stylesheet" href="../../estilos/paginas/usuarios.css">
+    <link rel="stylesheet" href="../../estilos/botonFormulario.css">
 </head>
 
 <body>
     <header-admin-component></header-admin-component>
     <main>
         <h2>Usuarios</h2>
+        <form method="GET">
+            <input id="buscador" type="text" placeholder="Inserta el DNI del usuario a buscar ... ">
+            <button>Buscar</button>
+        </form>
         <table>
             <thead>
                 <tr>
+                    <th>DNI</th>
                     <th>Nombre</th>
-                    <th>Apellido 1</th>
-                    <th>Apellido 2</th>
+                    <th>Apellidos</th>
                     <th>Dirección</th>
                     <th>Teléfono</th>
                     <th>Email</th>
@@ -38,13 +43,38 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>1234567A</td>
                     <td>Pepe</td>
-                    <td>Alonso</td>
-                    <td>Pérez</td>
-                    <td>C/nombre bastante largo aun más</td>
-                    <td>999-999-999</td>
+                    <td>Alonso Pérez</td>
+                    <td>C/Santiago</td>
+                    <td>654-345-567</td>
                     <td>pepe@email.com</td>
                     <td class="borrar">
+                        <button>Eliminar</button>
+                        <icon-delete-user></icon-delete-user>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3454567A</td>
+                    <td>Marta</td>
+                    <td>Ramirez Sanz</td>
+                    <td>C/Picasso</td>
+                    <td>678-657-456</td>
+                    <td>marta@email.com</td>
+                    <td class="borrar">
+                        <button>Eliminar</button>
+                        <icon-delete-user></icon-delete-user>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9876543B</td>
+                    <td>Juan</td>
+                    <td>González Ruiz</td>
+                    <td>Avd. Cantábria</td>
+                    <td>612-652-183</td>
+                    <td>juan@email.com</td>
+                    <td class="borrar">
+                        <button>Eliminar</button>
                         <icon-delete-user></icon-delete-user>
                     </td>
                 </tr>

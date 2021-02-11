@@ -2,6 +2,13 @@
     Autor:SusanaGE
     Fecha:16-12-2020
 */
+/*Marcar posición*/
+#navegacion li:nth-of-type(1) a{
+    background-color:var(--beige);
+    color: var(--azul-oscuro);
+    text-shadow: none;
+    font-weight: bold;
+}
 /*ESTILO PÁGINA INICIO*/
 main {
     display: flex;

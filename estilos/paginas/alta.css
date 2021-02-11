@@ -3,6 +3,13 @@
     Fecha: 03/02/2021
 */
 
+/*Marcar posición*/
+#navegacion li:nth-of-type(3) a{
+    background-color:var(--beige);
+    color: var(--azul-oscuro);
+    text-shadow: none;
+    font-weight: bold;
+}
 /**Móvil**/
 form {
     padding: 0 1.5em;
@@ -34,7 +41,7 @@ form #botones {
 form fieldset:first-of-type>div{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7,1fr);
+    grid-template-rows: repeat(9,1fr);
 }
 form fieldset:first-of-type>div>label{
     display: grid;
@@ -72,6 +79,9 @@ form fieldset:first-of-type>div label{
     form fieldset:first-of-type>div{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    form fieldset:first-of-type>div>div{
+        grid-row:4/5;
     }
 }
