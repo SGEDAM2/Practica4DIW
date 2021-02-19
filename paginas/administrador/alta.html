@@ -31,8 +31,8 @@
             <fieldset>
                 <legend>Datos</legend>
                 <div>
-                    <label for="dni"><span>DNI:</span> <input type="text" name="dni" id="dni" required></label>
-                    <label for="nombre"><span>Nombre:</span> <input type="text" name="nombre" id="nombre" required>
+                    <label for="dni"><span>DNI: *</span> <input type="text" name="dni" id="dni" pattern="[1-9]{8}[A-Z]" required></label>
+                    <label for="nombre"><span>Nombre: *</span> <input type="text" name="nombre" id="nombre" required>
                     </label>
                     <label for="apellido1"><span>Apellido 1:</span> <input type="text" name="apellido1"
                             id="apellido1"></label>
@@ -41,14 +41,14 @@
                     <label for="nacimiento"><span>Nacimiento:</span> <input type="date" name="nacimiento" id="nacimiento"></label>
                     <label for="direccion"><span>Dirección:</span> <input type="text" name="direccion"
                             id="direccion"></label>
-                    <label for="telefono"><span>Teléfono:</span> <input type="tel" name="telefono"
-                            id="telefono"></label>
-                    <label for="email"><span>Email:</span> <input type="email" name="email" id="email"></label>
+                    <label for="telefono"><span>Teléfono: *</span> <input type="tel" name="telefono"
+                            id="telefono" required></label>
+                    <label for="email"><span>Email: *</span> <input type="email" name="email" id="email" required></label>
                     <div>
-                        <label for="alumno"> Alumno <input type="radio" name="tipo" id="alumno" value="alumno"
-                                checked></label>
-                        <label for="profesor">Profesor <input type="radio" name="tipo" id="profesor"
-                                value="profesor"></label>
+                        <label for="alumno"><input type="radio" name="tipo" id="alumno" value="alumno"
+                                checked> Alumno </label>
+                        <label for="profesor"><input type="radio" name="tipo" id="profesor"
+                                value="profesor"> Profesor </label>
                     </div>
                 </div>
             </fieldset>

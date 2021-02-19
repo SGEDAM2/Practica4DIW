@@ -37,7 +37,7 @@ main a {
 }
 main a:hover,
 main a:focus {
-    background-color: var(--azul);
+    background-color: var(--azul-oscuro);
     color: #ffffff;
     box-shadow: 0 1px 2px var(--azul-oscuro);
 }

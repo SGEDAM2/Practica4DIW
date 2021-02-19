@@ -75,7 +75,7 @@ section:last-of-type a:focus {
 }
 #iniciar:hover,
 #iniciar:focus {
-    background-color: var(--azul);
+    background-color: var(--azul-oscuro);
 }
 
 /*Tablet*/
@@ -95,6 +95,11 @@ section:last-of-type a:focus {
     }
     section:first-of-type h1{
         display: none;
+    }
+    section:first-of-type a{
+        display: block;
+        height: 100%;
+        width: 100%;
     }
     /*Sección 2*/
     form{

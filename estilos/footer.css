@@ -17,6 +17,10 @@ footer>a img{
 }
 footer>a:nth-of-type(2) img{
     width: 350px;
+    margin-left: 2%;
+}
+footer>a img:focus, footer>a img:hover{
+    transform: scale(1.2,1.2);
 }
 
 /*Enlaces texto*/

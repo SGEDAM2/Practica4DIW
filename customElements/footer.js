@@ -20,14 +20,14 @@ class Footer extends HTMLElement {
         if (this.src != '../imagenes/logo-jcyl.png') {
             this.src='../../imagenes/logo-jcyl.png';
         }"></a>
-        <a href="https://www.educa.jcyl.es/es"><img src="imagenes/logo-educacyl.gif" alt="Educacyl"
+        <a href="https://www.educa.jcyl.es/es"><img src="imagenes/logo-educacyl.png" alt="Educacyl"
         onError="this.onerror=null;        
         /* first condition */
-        if (this.src != 'imagenes/logo-educacyl.gif') {
-            this.src='../imagenes/logo-educacyl.gif';
+        if (this.src != 'imagenes/logo-educacyl.png') {
+            this.src='../imagenes/logo-educacyl.png';
         }
-        if (this.src != '../imagenes/logo-educacyl.gif') {
-            this.src='../../imagenes/logo-educacyl.gif';
+        if (this.src != '../imagenes/logo-educacyl.png') {
+            this.src='../../imagenes/logo-educacyl.png';
         }"></a>
         <nav>
             <ul>

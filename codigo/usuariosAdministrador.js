@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 /*Borrar un usuario*/
 const borrarUsuario = e =>{
-    //console.log(e.target.tagName);
-    if(confirm("¿Seguro que desea eliminar al usuario?")){
-        if(e.target.tagName === "BUTTON")
-            e.target.parentElement.parentElement.remove();
-        else if(e.target.tagName === "svg" || e.target.tagName === "HTMLFontElement")
-            e.target.parentElement.parentElement.parentElement.remove();
-        else
-            e.target.parentElement.remove();
+    console.log(e.target.tagName);
+    if(e.target.tagName !== "path"){
+        if(confirm("¿Seguro que desea eliminar al usuario?")){
+            if(e.target.tagName === "BUTTON")
+                e.target.parentElement.parentElement.remove();
+            else if(e.target.tagName === "svg" || e.target.tagName === "HTMLFontElement")
+                e.target.parentElement.parentElement.parentElement.remove();
+            else
+                e.target.parentElement.remove();
+        }
     }
 }

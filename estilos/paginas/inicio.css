@@ -41,6 +41,10 @@ section>img:last-of-type {
     margin-top: 1em;
 }
 
+/*Espacio entre el título y texto del carrusel*/
+h3{
+    margin-bottom: 0.5em;
+}
 /*Escritorio*/
 @media screen and (min-width: 576px){
     section{

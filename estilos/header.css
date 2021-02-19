@@ -26,7 +26,7 @@ header svg {
 /*Icono menú*/
 #menu {
     background-color: var(--azul);
-    width: 18%;
+    width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,7 @@ header nav ul {
 }
 header nav a {
     height: 2.5em;
-    color: var(--azul-claro);
+    color: var(--azul-oscuro);
     text-shadow: 2px 2px 8px var(--azul-oscuro);
     text-decoration: none;
     display: flex;
@@ -56,7 +56,7 @@ header nav a {
 header li a:hover,
 header li a:focus {
     /*Color*/
-    color: var(--azul);
+/*     color: var(--azul); */
     background-color: var(--azul-claro);
     /*Sombra texto*/
     text-shadow: 2px 2px 8px var(--azul);
