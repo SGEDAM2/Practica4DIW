@@ -1,4 +1,6 @@
 /**
+ * Función de borrar del icono de la tabla de usuarios
+ * 
  * Autor: SusanaGE
  * Fecha:04-02-2021
  */

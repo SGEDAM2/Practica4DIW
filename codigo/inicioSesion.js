@@ -1,4 +1,6 @@
 /**
+ * Acceso a la página principal del adminitrador más pulsar el botón de inicio
+ * 
  * Autor:SusanaGE
  * Fecha:04-02-2021
  */
